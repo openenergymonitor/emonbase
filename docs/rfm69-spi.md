@@ -2,8 +2,15 @@
 
 ## Overview
 
+The latest emonBase comes with a new direct SPI RFM69 adapter board. Previously we had an ATmega328 microcontroller as an intermediary between the RFM69 module and the RaspberryPi, this was required for the JeeLib Classic radio format. With the switch to using the LowPowerLabs radio format a direct SPI connection is now possible and provides other benefits in terms of radio module configurability. For more detail on the different radio formats see [emonTx4: rfm69-radio](https://docs.openenergymonitor.org/emontx4/technical.html#rfm69-radio).
+
 ![emonBase_rfm69_spi.jpg](img/emonBase_rfm69_spi.jpg)
 
+If the RFM69 SPI module is bought as part of an emonBase through our shop, the module will already be installed on the Raspberry Pi. The Raspberry Pi will also come installed in a nice wall mountable aluminium enclosure. See shop item images: [https://shop.openenergymonitor.com/emonbase-433mhz-rfm69spi](https://shop.openenergymonitor.com/emonbase-433mhz-rfm69spi/).
+
+## Mounting the RFM69 SPI module
+
+**Important:** The position of the RFM69 SPI module on the Raspberry Pi header pins is different to the original RFM69Pi board. The SPI pins are part way along the Raspberry Pi GPIO header. The board should be mounted so that there are 7 pins free between the board and the Ethernet socket to the left and 8 pins free to the right, as shown in the picture above. **Take special care to get the position right as the board could be damaged in the wrong position.**
 
 ## EmonHub Interfacer
 
@@ -23,6 +30,8 @@ If you are adding an RFM69 SPI board to an existing install you will need to add
         [[[runtimesettings]]]
             pubchannels = ToEmonCMS,
 ```
+
+This configuration is included by default on the latest emonSD image.
 
 ## Radio encryption key
 
