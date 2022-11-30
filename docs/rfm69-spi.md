@@ -36,3 +36,20 @@ This configuration is included by default on the latest emonSD image.
 ## Radio encryption key
 
 The encryption key for the RFM69 is currently hard coded in the EmonHubRFM69LPLInterfacer. This will be broken out as an emonhub.conf configuration option soon. If you would like to change the encryption key to make it secure, this can be done by modifying the  `encryptionKey` setting on line 51 of the EmonHubRFM69LPLInterfacer itself: [https://github.com/openenergymonitor/emonhub/blob/master/src/interfacers/EmonHubRFM69LPLInterfacer.py#L51](https://github.com/openenergymonitor/emonhub/blob/master/src/interfacers/EmonHubRFM69LPLInterfacer.py#L51).
+
+## Open Hardware
+
+The RFM69 SPI Board is open hardware. The Eagle schematic and board files are available here: [https://github.com/openenergymonitor/emonbase/tree/main/rfm69-spi](https://github.com/openenergymonitor/emonbase/tree/main/rfm69-spi)
+
+**Schematic:**
+
+![rfm69-spi-sch.png](img/rfm69-spi-sch.png)
+
+**Board:**
+
+```{image} img/rfm69-spi-board.png
+:alt: board
+:class: bg-primary
+:width: 300px
+:align: left
+```
