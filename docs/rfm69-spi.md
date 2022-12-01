@@ -16,7 +16,7 @@ If the RFM69 SPI module is bought as part of an emonBase through our shop, the m
 
 Radio packets received by the RFM69 SPI board are read using what is called an `Interfacer` in a piece of software called `emonHub` that runs on the RaspberryPi. The interfacer is called `EmonHubRFM69LPLInterfacer` and makes use of [our modifed version](https://github.com/openenergymonitor/rpi-rfm69) of the [jgillula/rpi-rfm69 library](https://github.com/jgillula/rpi-rfm69).
 
-This library is installed as standard on the latest emonSD image, it will also install automatically if an older emonSD image is upgraded.
+This library is installed as standard on the latest emonSD image (`emonSD-10Nov22` onwards), it will also install automatically if an older emonSD image is upgraded by running 'Full Update' in Admin>Update.
 
 If you are adding an RFM69 SPI board to an existing install you will need to add the following interfacer configuration entry in the interfacers section of emonhub.conf to enable reading from this board:
 
@@ -31,7 +31,11 @@ If you are adding an RFM69 SPI board to an existing install you will need to add
             pubchannels = ToEmonCMS,
 ```
 
-This configuration is included by default on the latest emonSD image.
+This configuration is included by default on the latest emonSD image (`emonSD-10Nov22` onwards).
+
+## Enable SPI 
+
+The SPI interface on on the RaspberryPi must be enabled to use the RFM69 SPI, this is enabled by default on the latest emonSD image (`emonSD-10Nov22` onwards) and will be automatically enabled to older images by running 'Full Update' in Admin>Update. To manually enable SPI connect via SSH and run `sudo raspi-config` and select `SPI` under `Interface Options`. Or alterantivly uncomment `dtparam=spi=on` in `/boot/config.txt`. 
 
 ## Radio encryption key
 
