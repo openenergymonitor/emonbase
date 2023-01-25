@@ -23,4 +23,4 @@ If you are looking to use the new emonTx4 energy monitoring node with an existin
 ## Hardware
 
 - [v3.1 schematic and board files](https://github.com/openenergymonitor/RFM2Pi/tree/master/hardware/RFM69Pi_V3.1)
-- [v3 wiki page](https://wiki.openenergymonitor.org/index.php?title=RFM69Pi_V3)
+- [v3 github documentation page](https://github.com/openenergymonitor/RFM2Pi/blob/master/docs/rfm69pi_v3.md)
