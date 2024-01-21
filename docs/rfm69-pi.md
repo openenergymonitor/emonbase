@@ -22,21 +22,14 @@ If you are looking to use the new emonTx4 energy monitoring node with an existin
 ## EmonHub Interfacer
 
 ```
-[[RFM2Pi]]
-    Type = EmonHubJeeInterfacer
-    [[[init_settings]]]
-        com_port = /dev/ttyAMA0
-        com_baud = 38400                        # 9600 for old RFM12Pi
-    [[[runtimesettings]]]
-        pubchannels = ToEmonCMS,
-        subchannels = ToRFM12,
-
-        group = 210
-        frequency = 433
-        baseid = 5                              # emonPi / emonBase nodeID
-        calibration = 230V                      # (UK/EU: 230V, US: 110V)
-        quiet = true                            # Disable quite mode (default enabled) to enable RF packet debu$
-        # interval =  300                         # Interval to transmit time to emonGLCD (seconds)
+    [[RFM69PI]]
+        Type = EmonHubOEMInterfacer
+        [[[init_settings]]]
+            com_port = /dev/ttyAMA0
+            com_baud = 38400
+        [[[runtimesettings]]]
+            pubchannels = ToEmonCMS,
+            subchannels = ToRFM12,
 ```
 
 ## Hardware
