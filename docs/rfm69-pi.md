@@ -19,6 +19,19 @@ If you are looking to use the new emonTx4 energy monitoring node with an existin
 - [emonBase_rfm69pi](https://github.com/openenergymonitor/RFM2Pi/tree/master/firmware/emonBase_rfm69pi): RFM69 LowPowerLabs format radio firmware (or optionally RFM69 JeeLib Native format).
 - [RFM69CW_RF12_Demo_ATmega328](https://github.com/openenergymonitor/RFM2Pi/tree/master/firmware/RFM69CW_RF_Demo_ATmega328/RFM69CW_RF12_Demo_ATmega328): JeeLib Classic radio format firmware.
 
+## EmonhHub Interfacer
+
+```
+    [[RFM69PI]]
+        Type = EmonHubOEMInterfacer
+        [[[init_settings]]]
+            com_port = /dev/ttyAMA0
+            com_baud = 38400
+        [[[runtimesettings]]]
+            pubchannels = ToEmonCMS,
+            subchannels = ToRFM12,
+```
+
 ## Hardware
 
 - [v3.1 schematic and board files](https://github.com/openenergymonitor/RFM2Pi/tree/master/hardware/RFM69Pi_V3.1)
