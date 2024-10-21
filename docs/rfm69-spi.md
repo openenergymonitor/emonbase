@@ -27,6 +27,7 @@ If you are adding an RFM69 SPI board to an existing install you will need to add
         [[[init_settings]]]
             nodeid = 5
             networkID = 210
+            selPin = 26
         [[[runtimesettings]]]
             pubchannels = ToEmonCMS,
 ```
